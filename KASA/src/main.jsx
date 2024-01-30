@@ -12,9 +12,6 @@ import './style/global.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='main'>
-      <h1>HEADER</h1>
-
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -22,8 +19,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>
-
-      <h1>FOOTER</h1>
-    </div>
   </React.StrictMode>,
 )

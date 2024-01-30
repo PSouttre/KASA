@@ -1,10 +1,14 @@
-const MainLayout = (children) => {
+import Header from "../components/Header/Header"
+
+const MainLayout = ({children}) => {
     return (
-        <div className='main'>
-            <h1>HEADER</h1>
-                {children}
-            <h1>FOOTER</h1>
-        </div>
+        <>
+            <Header />
+            <main>
+                    {children}
+            </main>
+            <footer>FOOTER</footer>
+        </>
     )
 }
 

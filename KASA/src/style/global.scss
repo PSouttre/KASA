@@ -1,15 +1,15 @@
 @use "reset";
 
 html {
-    background-color: red
+    background-color: white
 }
 
-.main {
+main {
     border: 1px solid red;
     max-width: 800px;
     margin: auto;
 
     h1 {
-        color: yellow
+        color: black
     }
 }
