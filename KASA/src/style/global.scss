@@ -1,13 +1,11 @@
 @use "reset";
-$main-color :  #FF6060;
+@use "variables";
 
-html {
-    background-color: white
+body {
+    font-family: Montserrat;
 }
 
-
 main {
-    border: 1px solid red;
     max-width: 800px;
     margin: auto;
 

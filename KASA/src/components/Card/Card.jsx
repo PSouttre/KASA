@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
+import './Card.scss'
 import { useState } from 'react'
-import './Dropdown.scss'
 
-const Dropdown = ({title, content}) => {
+const Card = ({title, content}) => {
 
     // On définit un state
     const [isDisplay, setIsDisplay] = useState(false)
@@ -25,4 +24,4 @@ const Dropdown = ({title, content}) => {
     )
 }
 
-export default Dropdown
+export default Card

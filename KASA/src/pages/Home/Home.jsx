@@ -1,12 +1,14 @@
+import './Home.scss'
+
 import MainLayout from "../../layout/MainLayout"
-import img from '../../assets/images/image_source_1.png'
+import Banner from '../../components/Banner/Banner'
 
 
 
 const Home = () => {
     return (
         <MainLayout>
-            <img src={img} alt="Paysage de falaise et océan" />
+            <Banner/>
         </MainLayout>
     )
 }

@@ -1,7 +1,23 @@
+$main-color :  #FF6060;
+$text-color : white;
+$dropdown-background-color : #F6F6F6;
+
+
 .title {
-    background-color: red;
+    background-color: $main-color;
+    color: $text-color;
+    width: 1023px;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+    margin: 20px;
 }
 
 .hidden {
     display: none;
 }
+
+.content {
+    background-color: $dropdown-background-color;
+    color: $main-color;
+}
+
