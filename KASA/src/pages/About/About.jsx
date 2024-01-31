@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom"
 import MainLayout from "../../layout/MainLayout"
+import img from '../../assets/images/image_source_2.png'
+import Dropdown from "../../components/Dropdown/Dropdown"
 
 const About = () => {
     return (
         <MainLayout>
-            <h1>A Propos</h1>
-            <Link to="/">Page d'accueil</Link>
+            <img src={img} alt="Paysage de montagnes" />
+            <Dropdown title="Equipements" content="Lorem ipsum dolor sit amet..." />
+            <Dropdown title="Information" content="Maitre corbeau sur un arbre perché...." />
         </MainLayout>
         
     )

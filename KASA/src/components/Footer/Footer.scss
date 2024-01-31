@@ -1,0 +1,19 @@
+#footer {
+
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 209px;
+    
+
+    .logo__footer {
+        margin: 20px;
+    }
+
+    .copyright__footer {
+        font-size: 24px;
+    }
+}
