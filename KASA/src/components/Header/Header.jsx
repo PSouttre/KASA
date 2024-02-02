@@ -10,10 +10,10 @@ const Header = () => {
                 <img src={img} alt="logo kasa" />
             </div>
             <nav className='navbar'>
-                <NavLink to="/" activeClassName="selected">
+                <NavLink to="/" className={(nav)=>(nav.isActive ? "nav-active" : "")}>
                     Accueil
                 </NavLink>
-                <NavLink to="/a-propos" activeClassName="selected">
+                <NavLink to="/a-propos" className={(nav)=>(nav.isActive ? "nav-active" : "")}>
                     A Propos
                 </NavLink>
             </nav>
