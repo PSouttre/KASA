@@ -1,7 +1,7 @@
 import './Home.scss'
 
 import MainLayout from "../../layout/MainLayout"
-import Banner from '../../components/Banner/Banner'
+import HomeBanner from '../../components/Banner/HomeBanner'
 import Card from '../../components/Card/Card'
 
 
@@ -9,8 +9,8 @@ import Card from '../../components/Card/Card'
 const Home = () => {
     return (
         <MainLayout>
-            <Banner/>
-            <Card image = "" title= ""/>
+            <HomeBanner/>
+            <Card image = "" title= "" content=""/>
         </MainLayout>
     )
 }

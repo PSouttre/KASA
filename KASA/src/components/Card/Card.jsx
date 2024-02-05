@@ -4,10 +4,10 @@ import { useState } from 'react'
 
 // import { useState } from 'react'
 
-const Card = ({title, image}) => {
+const Card = ({title, image, content}) => {
 
     // On définit un state
-    const [displayLocation, setDisplayLocation]= useState()
+    const [displayLocation, setDisplayLocation]= useState(false)
 
     // On définit le comportement
     const handleClick = () => {
@@ -25,6 +25,8 @@ const Card = ({title, image}) => {
                 <div className='title__card'>
                     {title}
                 </div>
+                <div className={`content ${displayLocation ? '' : 'hidden'}`}>{content}</div>
+
             </div>
         </div>
     )

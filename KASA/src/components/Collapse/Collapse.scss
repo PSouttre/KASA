@@ -1,0 +1,37 @@
+$main-color :  #FF6060;
+$text-color : white;
+$collapse-background-color : #F6F6F6;
+
+
+.container__collapse {
+    display: flex;
+    flex-direction: column;
+
+    .header__collapse {
+    display: flex;
+    background-color: $main-color;
+    color: $text-color;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+    margin: 12px;
+    width: 75%;
+}
+
+    .content {
+        background-color: $collapse-background-color;
+        color: $main-color;
+        width: 1023px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+}
+
+
+

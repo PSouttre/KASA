@@ -1,0 +1,26 @@
+$main-color :  #FF6060;
+$text-color : white;
+
+
+.img__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    img {
+        object-fit: cover;
+        border-radius: 25px;
+        position: relative;
+        height: 223px;
+        width: 1240px;
+        filter: brightness(0.6);
+    }
+    
+    h1 {
+        color: $text-color;
+        position: absolute;
+        z-index: 1;
+        font-size: 48px;
+    }
+}
