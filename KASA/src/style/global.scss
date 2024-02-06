@@ -1,13 +1,12 @@
 @use "reset";
 @use "variables";
-// @font-face {
-//     font-family: ;
-//     src: url();
-// }
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Work Sans', sans-serif;
 }
 
 main {

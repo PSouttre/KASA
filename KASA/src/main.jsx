@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 // PAGES
 import Home from "./pages/Home/Home"
+import Housing from "./pages/Housing/Housing"
 import About from "./pages/About/About"
 import Error from "./pages/Error/Error"
 
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/housing/:id' element={<Housing />} />
           <Route path='/a-propos' element={<About />} />
           <Route path='*' element={<Error />} />
         </Routes>

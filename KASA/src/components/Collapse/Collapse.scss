@@ -2,35 +2,40 @@ $main-color :  #FF6060;
 $text-color : white;
 $collapse-background-color : #F6F6F6;
 
-
 .container__collapse {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
     .header__collapse {
-    display: flex;
-    background-color: $main-color;
-    color: $text-color;
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px 10px 15px;
-    border-radius: 5px;
-    margin: 12px;
-    width: 75%;
-}
+        display: flex;
+        background-color: $main-color;
+        color: $text-color;
+        cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px 10px 15px;
+        border-radius: 5px;
+        width: 75%;
+    }
 
     .content {
         background-color: $collapse-background-color;
         color: $main-color;
-        width: 1023px;
+        width: 75%;
+        margin: 0;
+        padding: 10px;
     }
 
     .hidden {
         display: none;
     }
 
+    .each__collapse {
+        display: flex;
+        flex-direction: column;
+        margin: 12px;
+
+    }
 
 }
 

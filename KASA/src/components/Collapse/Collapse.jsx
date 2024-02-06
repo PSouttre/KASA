@@ -2,10 +2,8 @@
 import { useState } from 'react'
 import './Collapse.scss'
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// const ChevronDown = <FontAwesomeIcon icon={ChevronDown}/>
-// const ChevronUp = <FontAwesomeIcon icon={ChevronUp}/>
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Collapse = ({title, content}) => {
 
@@ -18,18 +16,16 @@ const Collapse = ({title, content}) => {
     }
     // On projette le state sur l'affichage
     return (
-        <div className="container__collapse">
-            <div className='each__collapse'>
-                <div
-                    className="header__collapse"
-                    onClick={handleClick}
-                >
-                    <h2 className="title__header__collapse">{title}</h2>
-                    {/* {!isDisplay ? <i className='icon__header__collapse'>{ChevronDown}</i> : <i className='icon__header__collapse'>{ChevronUp}</i>} */}
-                </div>
-                <div>    
-                    <div className={`content ${isDisplay ? '' : 'hidden'}`}>{content}</div>
-                </div>
+        <div className='each__collapse'>
+            <div
+                className="header__collapse"
+                onClick={handleClick}
+            >   
+                <h2 className="title__header__collapse">{title}</h2>
+                <FontAwesomeIcon icon={isDisplay ? faChevronUp : faChevronDown} />
+            </div>
+            <div>    
+                <div className={`content ${isDisplay ? '' : 'hidden'}`}>{content}</div>
             </div>
         </div>
     )
