@@ -6,6 +6,7 @@ $collapse-background-color : #F6F6F6;
 .container__collapse {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .header__collapse {
     display: flex;

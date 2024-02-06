@@ -1,10 +1,10 @@
 import './Card.scss'
-import img from '../../assets/images/image_source_1.png'
 import { useState } from 'react'
+import housings from '../../datas/logements.json'
+import Housing from '../Housing/Housing'
 
-// import { useState } from 'react'
 
-const Card = ({title, image, content}) => {
+const Card = ({title, cover, content}) => {
 
     // On définit un state
     const [displayLocation, setDisplayLocation]= useState(false)
@@ -19,13 +19,12 @@ const Card = ({title, image, content}) => {
         <div className='container'>
             <div className='location__card'onClick={handleClick}>
                 <div className='imageCover'>
-                    <img   src={img} alt="" />
-                    {image}
+                    <img   src={cover} alt="{title}" />
                 </div>
                 <div className='title__card'>
                     {title}
                 </div>
-                <div className={`content ${displayLocation ? '' : 'hidden'}`}>{content}</div>
+                <div className={`content ${displayLocation ? '' : 'hidden'}`}>{Housing}</div>
 
             </div>
         </div>
