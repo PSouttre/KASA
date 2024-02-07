@@ -19,16 +19,18 @@ const Home = () => {
     return (
         <MainLayout>
             <HomeBanner/>
-            {!data
-                ? <p>Loading...</p> 
-                : data.map((logement) => {
-                    return (
-                        <Link to={`/housing/${logement.id}`} key={logement.id}>
-                            <Card logement={logement} />
-                        </Link>
-                    )
-                })
-            }
+            <div className='container'>
+                {!data
+                    ? <p>Loading...</p> 
+                    : data.map((logement) => {
+                        return (
+                            <Link className="link__container" to={`/housing/${logement.id}`} key={logement.id}>
+                                <Card logement={logement} />
+                            </Link>
+                        )
+                    })
+                }
+            </div>
         </MainLayout>
     )
 }

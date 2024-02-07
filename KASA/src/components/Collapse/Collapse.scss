@@ -1,6 +1,6 @@
 $main-color :  #FF6060;
 $text-color : white;
-$collapse-background-color : #F6F6F6;
+$background-color : #F6F6F6;
 
 .container__collapse {
     display: flex;
@@ -19,7 +19,7 @@ $collapse-background-color : #F6F6F6;
     }
 
     .content {
-        background-color: $collapse-background-color;
+        background-color: $background-color;
         color: $main-color;
         width: 75%;
         margin: 0;

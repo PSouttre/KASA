@@ -1,3 +1,23 @@
 $main-color :  #FF6060;
 $text-color : white;
+$background-color : #F6F6F6;
 
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $background-color;
+    border-radius: 25px;
+    margin: 10px;
+    gap: 20px;
+    padding: 30px;
+}
+
+.link__container {
+    display: flex;
+    width: 33%;
+    width: 340px;
+    height: 340px;
+    cursor: pointer;
+}
