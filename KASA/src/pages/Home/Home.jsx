@@ -8,14 +8,17 @@ import Card from '../../components/Card/Card'
 
 const Home = () => {
 
+    // state
     const [data, setData] = useState(null)
 
+    // comportement
     useEffect(() => {
         fetch('./src/datas/logements.json')
             .then(data => data.json())
             .then(result => setData(result))
     }, [])
-
+    
+    // affichage
     return (
         <MainLayout>
             <HomeBanner/>
