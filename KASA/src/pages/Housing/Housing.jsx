@@ -1,31 +1,34 @@
 import './Housing.scss'
 
+import { useData } from '../../provider/DataProvider'
+
 import { useParams } from 'react-router-dom'
 import MainLayout from "../../layout/MainLayout"
 import Slideshow from '../../components/Slideshow/Slideshow'
 
 const Housing = () => {
-    const {id} = useParams() // :id dans le router main.jsx ligne 19 ;)
+    const {houseId} = useParams() // :houseId dans le router main.jsx ligne 19 ;)
+    const {data} = useData()
 
-    console.log(id)
+    const housingData = data.filter((house) => house.id === houseId)[0]
 
-    // // logement /card sur lequel on a cliqué
-    // const housingClicked = 
-    // // rechercher le logement qui a l'id === id
-    // const housingDisplayed = data.find (logement => logement.id === housingClicked )
+    console.log(housingData)
 
-    // useEffect...fetch...state...etc...
+    // fournir les photos à <Slideshow pictures={housingData.pictures} />
+
+    // afficher les details dans la page
 
     return (
         <MainLayout>
             <div className='housing_ container'>
                 <div className='slideshow'>
-                    <Slideshow/>
+                    <Slideshow pictures={housingData.pictures} />
                 </div>
                
                 
                 <div className='header_housind'>HEADER DU LOGEMENT</div>
                 <div className='collapse_housing'>COLLAPSE DU LOGEMENT</div>
+                {housingData.title}
             </div>
         </MainLayout>
     )

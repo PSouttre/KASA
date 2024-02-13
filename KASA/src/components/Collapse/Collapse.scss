@@ -6,36 +6,46 @@ $background-color : #F6F6F6;
     display: flex;
     flex-direction: column;
 
-    .header__collapse {
+    .each__collapse {
         display: flex;
-        background-color: $main-color;
-        color: $text-color;
-        cursor: pointer;
-        justify-content: space-between;
+        flex-direction: column;
+        margin: 12px;
         align-items: center;
-        padding: 10px 20px 10px 15px;
-        border-radius: 5px;
-        width: 75%;
-    }
+    
 
-    .content {
-        background-color: $background-color;
-        color: $main-color;
-        width: 75%;
-        margin: 0;
-        padding: 10px;
+        .header__collapse {
+            display: flex;
+            background-color: $main-color;
+            color: $text-color;
+            cursor: pointer;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 35px 15px 35px;
+            border-radius: 5px;
+            width: 75%;
+            transition: height 1s ease;
+
+        }
+        .content__container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            background-color: $background-color;
+            color: $main-color;
+            width: 75%;
+            margin: 0;
+            padding: 25px 35px;
+            border-radius: 5px;
+            line-height: 1.5;
+        }
     }
 
     .hidden {
         display: none;
     }
 
-    .each__collapse {
-        display: flex;
-        flex-direction: column;
-        margin: 12px;
-
-    }
 
 }
 

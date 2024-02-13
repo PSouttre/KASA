@@ -24,7 +24,7 @@ const Collapse = ({title, content}) => {
                 <h2 className="title__header__collapse">{title}</h2>
                 <FontAwesomeIcon icon={isDisplay ? faChevronUp : faChevronDown} />
             </div>
-            <div>    
+            <div className='content__container'>    
                 <div className={`content ${isDisplay ? '' : 'hidden'}`}>{content}</div>
             </div>
         </div>

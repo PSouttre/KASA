@@ -1,27 +1,14 @@
+/* eslint-disable react/prop-types */
 import './Slideshow.scss'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 
-const Slideshow = () => {
-
-        // state
-        const [data, setData] = useState(null)
-
-        // comportement
-        useEffect(() => {
-            fetch('./src/datas/logements.json')
-                .then(data => data.json())
-                .then(result => setData(result))
-        }, [])
-
-
-   
+const Slideshow = ({pictures}) => {
     // Initialisation du state 
     const [slide, setSlide] = useState(0);
     // Longueur du tableau de photos
-    const pictures = data.pictures;
     const lengthArray = pictures.length; 
 
     return (
@@ -40,18 +27,13 @@ const Slideshow = () => {
                     <FontAwesomeIcon icon={faChevronRight} />            
                 </p>
 
-                data.map((logement) = {
-                   (
-
-                        <div>
-                            <img src="{logement.pictures}" alt="" />
+                {pictures.map((picture) => (
+                        <div key={picture}>
+                            <img src={picture} alt="" />
                             <span>{slide + 1}/ {lengthArray}</span>
                         </div>
-
-
-            )
-                })
-
+                    )
+                )}
 
             </div>
         </div>
