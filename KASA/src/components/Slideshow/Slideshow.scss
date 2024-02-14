@@ -1,8 +1,51 @@
+$main-color :  #FF6060;
+$text-color : white;
+
+.carrousel {
+    display: flex;
+    width: 1240px;
+    height: 415px;
+    border-radius: 25px;
+    flex-direction: column;
+    position: relative;
+
+
+    .slide__carrousel {
+        width: 1240px;
+        height: 415px;
+
+    }
+        
+
+    img{
+        
+        object-fit: cover;
+    }
+    
+
+    .counter__carrousel {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        color: $text-color;
+    }
+}
+
 .fa-chevron-left, .fa-chevron-right {
     display: flex;
     height: 80px;
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    color: $text-color;
+
 }
 
-.hidden {
-    // display: none;
+.fa-chevron-left{
+    left: 10px;
+}
+.fa-chevron-right {
+    right: 10px;
 }

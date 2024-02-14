@@ -31,16 +31,12 @@ const Slideshow = ({pictures}) => {
                 <FontAwesomeIcon icon={faChevronLeft} /></i>
 
 
-                {/* {pictures.map((picture) => ( */}
-                    <div> 
-                    {/* key={picture}  */}
-                    {/* // className= {picture === slide ? "slide active" : "hidden"} */} 
-                        <img src={currentSlide} alt="" />
-                        
-                    </div>
-                    {/* )
-                )} */}
-<span>{slide + 1}/ {lengthArray}</span>
+                <div className='slide__carrousel'> 
+                    <img src={currentSlide} alt="" />                   
+                </div>
+
+                <span className='counter__carrousel'>{slide + 1}/ {lengthArray}</span>
+
                 <i className ='fa-solid fa-chevron-right'onClick={nextSlide}>
                 <FontAwesomeIcon icon={faChevronRight} /></i>            
                 
