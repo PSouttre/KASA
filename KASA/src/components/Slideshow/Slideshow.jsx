@@ -11,30 +11,39 @@ const Slideshow = ({pictures}) => {
     // Longueur du tableau de photos
     const lengthArray = pictures.length; 
 
+    //Image précédente
+    const nextSlide = () => {
+        setSlide(slide === lengthArray-1 ? 0 : slide + 1)
+    };
+
+    const prevSlide = () => {
+        setSlide(slide === 0 ? lengthArray -1 : slide -1)
+    }
+
+    // Slide actuelle
+    const currentSlide = pictures[slide];
+
     return (
         <div>
             <div className='carrousel'>
-                <p className='chevronLeft'onClick={() => {
-            setSlide(slide === 0 ? lengthArray - 1 : slide - 1);
-        }
-                }>
-                    <i className ='fa-solid fa-chevron-left'></i>
-                    <FontAwesomeIcon icon={faChevronLeft} />
-                </p>
 
-                <p className='chevronRight'onClick={() => {
-            setSlide (slide === lengthArray -1 ? 0 : slide + 1);}}>
-                    <FontAwesomeIcon icon={faChevronRight} />            
-                </p>
+                <i className ='fa-solid fa-chevron-left'onClick={prevSlide}>
+                <FontAwesomeIcon icon={faChevronLeft} /></i>
 
-                {pictures.map((picture) => (
-                        <div key={picture}>
-                            <img src={picture} alt="" />
-                            <span>{slide + 1}/ {lengthArray}</span>
-                        </div>
-                    )
-                )}
 
+                {/* {pictures.map((picture) => ( */}
+                    <div> 
+                    {/* key={picture}  */}
+                    {/* // className= {picture === slide ? "slide active" : "hidden"} */} 
+                        <img src={currentSlide} alt="" />
+                        
+                    </div>
+                    {/* )
+                )} */}
+<span>{slide + 1}/ {lengthArray}</span>
+                <i className ='fa-solid fa-chevron-right'onClick={nextSlide}>
+                <FontAwesomeIcon icon={faChevronRight} /></i>            
+                
             </div>
         </div>
 
