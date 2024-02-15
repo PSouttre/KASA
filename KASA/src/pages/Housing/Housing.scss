@@ -1,11 +1,12 @@
 $main-color :  #FF6060;
 $text-color : white;
+$background-color : #F6F6F6;
+$background-star : #E3E3E3;
 
 
 .housing__container {
     background-color: white;
     width: 1240px;
-    height: 643px;
 }
 
 .slideshow {
@@ -13,3 +14,131 @@ $text-color : white;
     border-radius: 25px;
 
 }
+.infos__housing__header__housing {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: aqua;
+}
+.header__housing {
+    display: flex;
+    flex-direction: row;
+    color: $main-color;
+    margin: 10px;
+
+    .title__header__housing{
+        font-size: 36px;
+        margin: 10px 0;
+    }
+
+    .location__header__housing {
+        font-size: 18px;
+    }
+
+
+    .tags__header__housing {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        .tag__tags__header__housing {
+            display: flex;
+            color: $text-color;
+            background-color: $main-color;
+            border-radius: 10px;
+            // width: 110px;
+            height: 22px;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            padding: 0 15px;
+            margin: 10px 0;
+    
+        }
+    }
+
+    .hostImg__header__housing {
+        border-radius: 4rem;
+        height: 64px;
+    }
+
+    .hostName__header__housing {
+        font-size: 18px;
+    }
+
+    .infos__host__header__housing {
+        display: flex;
+        flex-direction: colum;
+        width: 25%;
+        justify-content: flex-end;
+        background-color: chartreuse;
+    }
+
+    .host__header__housing {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+    }
+    .rating__header__housing {
+        margin: 10px;
+    }
+
+    .faStarPink {
+        color: $main-color;
+    }
+
+    .faStarGrey {
+        color: $background-star;
+    }
+}
+
+.collapse__housing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    .each__collapse {
+        display: flex;
+        flex-direction: column;
+        margin: 12px;
+        align-items: center;
+    
+
+        .header__collapse {
+            display: flex;
+            background-color: $main-color;
+            color: $text-color;
+            cursor: pointer;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 35px 15px 35px;
+            border-radius: 5px;
+            width: 75%;
+            transition: height 1s ease;
+
+        }
+        .content__container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            background-color: $background-color;
+            color: $main-color;
+            width: 75%;
+            margin: 0;
+            padding: 25px 35px;
+            border-radius: 5px;
+            line-height: 1.5;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+
+
+
+

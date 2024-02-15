@@ -27,18 +27,23 @@ const Slideshow = ({pictures}) => {
         <div>
             <div className='carrousel'>
 
+            {lengthArray>1 && <>
                 <i className ='fa-solid fa-chevron-left'onClick={prevSlide}>
                 <FontAwesomeIcon icon={faChevronLeft} /></i>
-
+                </>}
 
                 <div className='slide__carrousel'> 
                     <img src={currentSlide} alt="" />                   
                 </div>
 
+            {lengthArray>1 && <>
                 <span className='counter__carrousel'>{slide + 1}/ {lengthArray}</span>
+                </>}
 
+                {lengthArray>1 && <>
                 <i className ='fa-solid fa-chevron-right'onClick={nextSlide}>
                 <FontAwesomeIcon icon={faChevronRight} /></i>            
+                </>}
                 
             </div>
         </div>
