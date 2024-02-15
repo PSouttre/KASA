@@ -13,13 +13,6 @@ const Housing = () => {
 
     const housingData = data.filter((house) => house.id === houseId)[0]
 
-    // console.log(housingData)
-
-    // fournir les photos à <Slideshow pictures={housingData.pictures} />
-
-    // afficher les details dans la page
-    console.log(housingData.host.picture);
-
     return (
         <MainLayout>
             <div className='housing__container'>
@@ -39,10 +32,17 @@ const Housing = () => {
                 </div>
 
                 <div className='collapse_housing'>
-                    <Collapse title={"Description"} content={housingData.description}/>
-                    <Collapse title={"Equipements"} content={housingData.equipments}/>
+                    <div className='description__collapse__housing'>
+                        <Collapse title={"Description"} content={housingData.description}/>
+                    </div>
 
+                    <div className='equipments__collapse__housing'>
+                        <Collapse title={"Equipements"} content=    {housingData.equipments.map((equipment, i) => (<ul key = {i}>
+                            <li>{equipment}</li>
+                        </ul>))}/>
+                    </div>
                 </div>
+
                 {housingData.title}
             </div>
         </MainLayout>
