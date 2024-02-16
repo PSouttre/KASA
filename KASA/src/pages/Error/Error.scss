@@ -3,18 +3,27 @@ $text-color : white;
 
 .container-error-page {
     color: $main-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1 {
         font-size: 288px;
         color: $main-color;
         font-weight: 700;
+        margin: 50px;
+
     }
 
     p {
         font-size: 36px;
+        margin: 50px;
     }
 
     a {
+        color: $main-color;
         font-size: 18px;
+        margin: 50px;
+
     }
 }

@@ -64,9 +64,6 @@ const Housing = () => {
                                 : <span key={ratingStarElement.toString()} className='faStarGrey'>{starGrey}</span>
                             
                             )}
-                            {/* {housingData.rating} 
-                            // {starPink}
-                            // {starGrey} */}
                          </div>
                     </article>
 
@@ -74,11 +71,11 @@ const Housing = () => {
 
                 <div className='collapse__housing'>
                     <div className='description__collapse__housing'>
-                        <Collapse title={"Description"} content={housingData.description}/>
+                        <Collapse className='collapse__description__collapse__housing'title={"Description"} content={housingData.description}/>
                     </div>
 
                     <div className='equipments__collapse__housing'> 
-                        <Collapse title={"Equipements"} content=    {housingData.equipments.map((equipment, i) => (<ul key = {i}>
+                        <Collapse className='collapse__equimpents__collapse__housing'     title={"Equipements"} content=    {housingData.equipments.map((equipment, i) => (<ul key = {i}>
                             <li>{equipment}</li>
                         </ul>))}/>
                     </div>
