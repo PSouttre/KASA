@@ -66,13 +66,6 @@ $background-star : #E3E3E3;
         font-size: 18px;
     }
 
-    .infos__host__header__housing {
-        display: flex;
-        flex-direction: colum;
-        width: 25%;
-        justify-content: flex-end;
-        background-color: chartreuse;
-    }
 
     .host__header__housing {
         display: flex;
@@ -91,6 +84,16 @@ $background-star : #E3E3E3;
         color: $background-star;
     }
 }
+
+.infos__host__header__housing {
+    display: flex;
+    flex-direction: colum;
+    width: 25%;
+    justify-content: flex-end;
+    background-color: chartreuse;
+}
+
+
 
 .collapse__housing{
     display: flex;

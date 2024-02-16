@@ -6,7 +6,8 @@ import { useParams } from 'react-router-dom'
 import MainLayout from "../../layout/MainLayout"
 import Slideshow from '../../components/Slideshow/Slideshow'
 import Collapse from '../../components/Collapse/Collapse'
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
 const Housing = () => {
@@ -15,11 +16,10 @@ const Housing = () => {
 
     const housingData = data.filter((house) => house.id === houseId)[0]
     
-    // const ratingStar = [1, 2, 3, 4, 5]
-    // const ratingHousing = housingData.rating
-    // console.log(ratingHousing);
-    // const starPink = <FontAwesomeIcon icon={faStar} />
-    // const starGrey = <FontAwesomeIcon icon={faStar} />
+    const ratingStar = [1, 2, 3, 4, 5]
+    const ratingHousing = housingData.rating
+    const starPink = <FontAwesomeIcon icon={faStar} />
+    const starGrey = <FontAwesomeIcon icon={faStar} />
     
 
     return (
@@ -59,12 +59,14 @@ const Housing = () => {
                         </div>
 
                         <div className='rating__header__housing'>
-                            {/* {ratingStar.map((ratingStarElement) => ratingHousing >= ratingStarElement ?
+                            {ratingStar.map((ratingStarElement) => ratingHousing >= ratingStarElement ?
                                 <span key={ratingStarElement.toString()} className='faStarPink'>{starPink}</span> 
                                 : <span key={ratingStarElement.toString()} className='faStarGrey'>{starGrey}</span>
                             
-                            )} */}
-                            {housingData.rating}
+                            )}
+                            {/* {housingData.rating} 
+                            // {starPink}
+                            // {starGrey} */}
                          </div>
                     </article>
 
