@@ -1,4 +1,3 @@
-import './AboutBanner.scss'
 import img from '../../assets/images/image_source_2.png'
 
 const AboutBanner = () => {

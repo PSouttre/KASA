@@ -32,33 +32,34 @@ const Housing = () => {
                
                 
                 <div className='header__housing'>
-                    <article className='infos__housing__header__housing'>
-                        <h1 className='title__header__housing'>
+                    <article className='header__housing__infos'>
+                        <h1 className='header__housing__title'>
                             {housingData.title}
                         </h1>
 
-                        <h2 className='location__header__housing'>
+                        <h2 className='header__housing__location'>
                             {housingData.location}
                         </h2>
 
-                        <div className='tags__header__housing'>
+                        <div className='header__housing__tags'>
                             {housingData.tags.map ((tag, i) => (
-                                <p key={i} className='tag__tags__header__housing'>{tag}</p>
+                                <p key={i} className='header__housing__tags__tag'>{tag}</p>
                             ))}
                         </div>
 
                     </article>
 
-                    <article className='infos__host__header__housing'>
+                    <article className='header__housing__host__infos'>
 
-                        <div className='host__header__housing'>
-                            <p className='hostName__header__housing'>
+                        <div className='header__housing__host'>
+                            <p className='header__housing__host__name'>
                                 {housingData.host.name}
                             </p>
-                            <img src={housingData.host.picture} alt={`${housingData.host.name} propriétaire de ${housingData.title}`} className='hostImg__header__housing'/>
+
+                            <img src={housingData.host.picture} alt={`${housingData.host.name} propriétaire de ${housingData.title}`} className='header__housing__host__img'/>
                         </div>
 
-                        <div className='rating__header__housing'>
+                        <div className='header__housing__rating'>
                             {ratingStar.map((ratingStarElement) => ratingHousing >= ratingStarElement ?
                                 <span key={ratingStarElement.toString()} className='faStarPink'>{starPink}</span> 
                                 : <span key={ratingStarElement.toString()} className='faStarGrey'>{starGrey}</span>
@@ -70,12 +71,12 @@ const Housing = () => {
                 </div>
 
                 <div className='collapse__housing'>
-                    <div className='description__collapse__housing'>
-                        <Collapse className='collapse__description__collapse__housing'title={"Description"} content={housingData.description}/>
+                    <div className='collapse__housing__description'>
+                        <Collapse title={"Description"} content={housingData.description}/>
                     </div>
 
-                    <div className='equipments__collapse__housing'> 
-                        <Collapse className='collapse__equimpents__collapse__housing'     title={"Equipements"} content=    {housingData.equipments.map((equipment, i) => (<ul key = {i}>
+                    <div className='collapse__housing__equipments'> 
+                        <Collapse  title={"Equipements"} content=    {housingData.equipments.map((equipment, i) => (<ul key = {i}>
                             <li>{equipment}</li>
                         </ul>))}/>
                     </div>

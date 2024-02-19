@@ -11,10 +11,10 @@ const handleClickLocation = () => {
     return (
         
             <div className='location__card'onClick={handleClickLocation}>
-                <div className='image__cover'>
+                <div className='location__card__image__cover'>
                     <img src={logement.cover} />
                 </div>
-                <div className='title__card'>
+                <div className='location__card__title__card'>
                     {logement.title}
                 </div>
             </div>

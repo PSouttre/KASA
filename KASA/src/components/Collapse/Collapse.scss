@@ -13,7 +13,7 @@ $background-color : #F6F6F6;
         align-items: center;
     
 
-        .header__collapse {
+        &__header {
             display: flex;
             background-color: $main-color;
             color: $text-color;
@@ -24,29 +24,27 @@ $background-color : #F6F6F6;
             border-radius: 5px;
             width: 75%;
             transition: height 1s ease;
-
         }
-        .content__container{
+    
+        &__content {
             display: flex;
             justify-content: center;
-        }
 
-        .content {
-            background-color: $background-color;
-            color: $main-color;
-            width: 75%;
-            margin: 0;
-            padding: 25px 35px;
-            border-radius: 5px;
-            line-height: 1.5;
+            .content {
+                background-color: $background-color;
+                color: $main-color;
+                width: 75%;
+                margin: 0;
+                padding: 25px 35px;
+                border-radius: 5px;
+                line-height: 1.5;
+            }
         }
     }
 
     .hidden {
         display: none;
     }
-
-
 }
 
 

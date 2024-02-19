@@ -32,12 +32,12 @@ const Slideshow = ({pictures}) => {
                 <FontAwesomeIcon icon={faChevronLeft} /></i>
                 </>}
 
-                <div className='slide__carrousel'> 
+                <div className='carrousel__slide'> 
                     <img src={currentSlide} alt="" />                   
                 </div>
 
             {lengthArray>1 && <>
-                <span className='counter__carrousel'>{slide + 1}/ {lengthArray}</span>
+                <span className='carrousel__counter'>{slide + 1}/ {lengthArray}</span>
                 </>}
 
                 {lengthArray>1 && <>

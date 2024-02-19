@@ -20,7 +20,7 @@ const Home = () => {
                     ? <p>Loading...</p> 
                     : data.map((logement) => {
                         return (
-                            <Link className="link__container" to={`/housing/${logement.id}`} key={logement.id}>
+                            <Link className="container__link" to={`/housing/${logement.id}`} key={logement.id}>
                                 <Card logement={logement} />
                             </Link>
                         )

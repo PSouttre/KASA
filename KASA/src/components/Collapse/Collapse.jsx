@@ -18,13 +18,13 @@ const Collapse = ({title, content}) => {
     return (
         <div className='each__collapse'>
             <div
-                className="header__collapse"
+                className="each__collapse__header"
                 onClick={handleClick}
             >   
-                <h2 className="title__header__collapse">{title}</h2>
+                <h2 className="each__collapse__header__title">{title}</h2>
                 <FontAwesomeIcon icon={isDisplay ? faChevronUp : faChevronDown} />
             </div>
-            <div className='content__container'>    
+            <div className='each__collapse__content'>    
                 <div className={`content ${isDisplay ? '' : 'hidden'}`}>{content}</div>
             </div>
         </div>

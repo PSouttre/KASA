@@ -1,4 +1,3 @@
-import './About.scss'
 import MainLayout from "../../layout/MainLayout"
 import Collapse from "../../components/Collapse/Collapse"
 import AboutBanner from '../../components/Banner/AboutBanner'

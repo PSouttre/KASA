@@ -14,34 +14,35 @@ $background-star : #E3E3E3;
     border-radius: 25px;
 
 }
-.infos__housing__header__housing {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    // background-color: aqua;
-}
 .header__housing {
     display: flex;
     flex-direction: row;
     color: $main-color;
     margin: 10px;
 
-    .title__header__housing{
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        // background-color: aqua;
+    }
+    
+    &__title {
         font-size: 36px;
         margin: 10px 0;
     }
 
-    .location__header__housing {
+    &__location {
         font-size: 18px;
     }
 
 
-    .tags__header__housing {
+    &__tags {
         display: flex;
         flex-direction: row;
         gap: 10px;
 
-        .tag__tags__header__housing {
+        &__tag {
             display: flex;
             color: $text-color;
             background-color: $main-color;
@@ -57,22 +58,30 @@ $background-star : #E3E3E3;
         }
     }
 
-    .hostImg__header__housing {
-        border-radius: 4rem;
-        height: 64px;
+    &__host__infos {
+        display: flex;
+        flex-direction: colum;
+        width: 25%;
+        justify-content: flex-end;
+        // background-color: chartreuse;
     }
-
-    .hostName__header__housing {
-        font-size: 18px;
-    }
-
-
-    .host__header__housing {
+    
+    &__host {
         display: flex;
         flex-direction: row;
         margin: 10px;
+
+        &__name {
+            font-size: 18px;
+        }
+
+        &__img {
+            border-radius: 4rem;
+            height: 64px;
+        }
     }
-    .rating__header__housing {
+
+    &__rating {
         margin: 10px;
     }
 
@@ -85,13 +94,6 @@ $background-star : #E3E3E3;
     }
 }
 
-.infos__host__header__housing {
-    display: flex;
-    flex-direction: colum;
-    width: 25%;
-    justify-content: flex-end;
-    // background-color: chartreuse;
-}
 
 
 
