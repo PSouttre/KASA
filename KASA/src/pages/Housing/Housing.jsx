@@ -1,11 +1,11 @@
 import './Housing.scss'
 
+import { useEffect } from 'react'
 import { useData } from '../../provider/DataProvider'
-
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import MainLayout from "../../layout/MainLayout"
 import Slideshow from '../../components/Slideshow/Slideshow'
-import Collapse from '../../components/Collapse/Collapse'
+import Collapse from "../../components/Collapse/Collapse"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,13 +13,35 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 const Housing = () => {
     const {houseId} = useParams() // :houseId dans le router main.jsx ligne 19 ;)
     const {data} = useData()
+    const navigate = useNavigate()
 
     const housingData = data.filter((house) => house.id === houseId)[0]
+
+    // ca se joue QU'APRES le 1er rendu
+    useEffect(() => {
+        if (!housingData) {
+            navigate('/error?reason=bad-id')
+        }
+    }, [])
+
+    if (!housingData){
+        return null
+    }
     
     const ratingStar = [1, 2, 3, 4, 5]
     const ratingHousing = housingData.rating
     const starPink = <FontAwesomeIcon icon={faStar} />
     const starGrey = <FontAwesomeIcon icon={faStar} />
+
+    const renderEquipments = () => {
+        return (
+            <ul>
+                {housingData.equipments.map((equipment, i) => (
+                    <li key={i}>{equipment}</li>
+                ))}
+            </ul>
+        )
+    }
     
 
     return (
@@ -71,15 +93,15 @@ const Housing = () => {
                 </div>
 
                 <div className='collapse__housing'>
-                    <div className='collapse__housing__description'>
-                        <Collapse title={"Description"} content={housingData.description}/>
-                    </div>
+                    <Collapse
+                        title={"Description"}
+                        content={housingData.description}
+                    />
 
-                    <div className='collapse__housing__equipments'> 
-                        <Collapse  title={"Equipements"} content=    {housingData.equipments.map((equipment, i) => (<ul key = {i}>
-                            <li>{equipment}</li>
-                        </ul>))}/>
-                    </div>
+                    <Collapse 
+                        title={"Equipements"}
+                        content={renderEquipments()}
+                    />
                 </div>
             </div> 
         </MainLayout>

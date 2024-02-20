@@ -7,142 +7,96 @@ $background-star : #E3E3E3;
 .housing__container {
     background-color: white;
     width: 1240px;
-}
-
-.slideshow {
-    overflow: hidden;
-    border-radius: 25px;
-
-}
-.header__housing {
-    display: flex;
-    flex-direction: row;
-    color: $main-color;
-    margin: 10px;
-
-    &__infos {
-        display: flex;
-        flex-direction: column;
-        width: 75%;
-        // background-color: aqua;
-    }
     
-    &__title {
-        font-size: 36px;
-        margin: 10px 0;
+    .slideshow {
+        overflow: hidden;
+        border-radius: 25px;
     }
 
-    &__location {
-        font-size: 18px;
-    }
-
-
-    &__tags {
+    .header__housing {
         display: flex;
         flex-direction: row;
-        gap: 10px;
-
-        &__tag {
-            display: flex;
-            color: $text-color;
-            background-color: $main-color;
-            border-radius: 10px;
-            // width: 110px;
-            height: 22px;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            padding: 0 15px;
-            margin: 10px 0;
-    
-        }
-    }
-
-    &__host__infos {
-        display: flex;
-        flex-direction: colum;
-        width: 25%;
-        justify-content: flex-end;
-        // background-color: chartreuse;
-    }
-    
-    &__host {
-        display: flex;
-        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        color: $main-color;
         margin: 10px;
-
-        &__name {
+    
+        &__infos {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        &__title {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+    
+        &__location {
             font-size: 18px;
         }
-
-        &__img {
-            border-radius: 4rem;
-            height: 64px;
-        }
-    }
-
-    &__rating {
-        margin: 10px;
-    }
-
-    .faStarPink {
-        color: $main-color;
-    }
-
-    .faStarGrey {
-        color: $background-star;
-    }
-}
-
-
-
-
-.collapse__housing{
-    display: flex;
-    flex-direction: row;
-}
-    .each__collapse {
-        display: flex;
-        flex-direction: column;
-        margin: 12px;
-        align-items: flex-start;
     
-
-        .header__collapse {
+    
+        &__tags {
             display: flex;
-            background-color: $main-color;
-            color: $text-color;
-            cursor: pointer;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px 15px 20px;
-            border-radius: 5px;
-            width: 75%;
-            transition: height 1s ease;
-
+            flex-direction: row;
+            gap: 10px;
+    
+            &__tag {
+                display: flex;
+                color: $text-color;
+                background-color: $main-color;
+                border-radius: 10px;
+                min-width: 115px;
+                height: 25px;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                padding: 0 15px;
+                margin: 10px 0;
+        
+            }
         }
-        .content__container{
+    
+        &__host__infos {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-end;
+            // background-color: chartreuse;
         }
-
-        .content {
-            background-color: $background-color;
+        
+        &__host {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+    
+            &__name {
+                font-size: 18px;
+            }
+    
+            &__img {
+                border-radius: 4rem;
+                height: 64px;
+            }
+        }
+    
+        &__rating {
+            margin: 10px;
+        }
+    
+        .faStarPink {
             color: $main-color;
-            width: 75%;
-            margin: 0;
-            padding: 25px 35px;
-            border-radius: 5px;
-            line-height: 1.5;
+        }
+    
+        .faStarGrey {
+            color: $background-star;
         }
     }
 
-    .hidden {
-        display: none;
+    .collapse__housing {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
     }
-
-
-
-
-
-
+}

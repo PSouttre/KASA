@@ -2,6 +2,8 @@ import MainLayout from "../../layout/MainLayout"
 import Collapse from "../../components/Collapse/Collapse"
 import AboutBanner from '../../components/Banner/AboutBanner'
 
+import "./About.scss"
+
 const About = () => {
     return (
         <MainLayout>
