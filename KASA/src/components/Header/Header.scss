@@ -5,7 +5,9 @@ $main-color :  #FF6060;
     display: flex;
     justify-content: space-between;
     align-items: center;
-	margin: 50px 100px;
+    max-width: 1240px;
+    margin: auto;
+    padding: 50px 0;
 
     a {
         color: $main-color;
