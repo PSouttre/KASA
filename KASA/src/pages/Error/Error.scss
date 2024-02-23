@@ -12,16 +12,43 @@ $text-color : white;
         color: $main-color;
         font-weight: 700;
         margin: 50px;
+
+        @media (max-width : 870px) {
+            font-size: 192px;
+            }
+
+        @media (max-width : 380px) {
+            font-size: 96px;
+            }
+
     }
 
     p {
         font-size: 36px;
         margin: 50px;
+
+        @media (max-width : 870px) {
+            font-size: 24px;
+            }
+
+        @media (max-width : 380px) {
+            font-size: 18px;
+            }
+
     }
 
     a {
         color: $main-color;
         font-size: 18px;
         margin: 50px;
+
+        @media (max-width : 870px) {
+            font-size: 16px;
+            }
+
+        @media (max-width : 380px) {
+            font-size: 14px;
+            }
+
     }
 }

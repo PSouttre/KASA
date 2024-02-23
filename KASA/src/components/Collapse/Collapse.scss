@@ -8,6 +8,10 @@ $background-color : #F6F6F6;
     margin: 12px;
     align-items: center;
     width: 100%;
+
+    @media (max-width: 1240px) {
+        min-width: 335px;
+    }
     
     &__header {
         display: flex;

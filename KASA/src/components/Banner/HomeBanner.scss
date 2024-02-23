@@ -7,7 +7,11 @@ $text-color : white;
     justify-content: center;
     align-items: center;
 
-
+    @media (max-width : 1240px) {
+        margin: 15px;
+        min-width: 340px;
+        }
+    
     img {
         object-fit: cover;
         border-radius: 25px;
@@ -15,6 +19,15 @@ $text-color : white;
         height: 223px;
         width: 1240px;
         filter: brightness(0.6);
+
+        @media (max-width : 870px) {
+            height: 165px;
+            }
+        
+        @media (max-width : 380px) {
+            height: 110px;;
+            }
+    
     }
     
     h1 {
@@ -22,5 +35,17 @@ $text-color : white;
         position: absolute;
         z-index: 1;
         font-size: 48px;
+
+        @media (max-width : 870px) {
+            font-size: 36px;
+            font-weight: 400;
+            padding: 30px;
+            }
+
+        @media (max-width : 380px) {
+            font-size: 24px;
+            font-weight: 300;
+            }
+    
     }
 }
