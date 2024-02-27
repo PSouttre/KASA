@@ -6,17 +6,17 @@ $text-color : white;
     width: 100%;
     position: relative;
     
-        &__image__cover {
-            width: 340px;
-            height: 340px;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
+    &__image__cover {
+        width: 340px;
+        height: 340px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
 
             @media (max-width : 870px) {
                 height: 300px;
             }
-        
+            
             @media (max-width : 380px) {
                 width: 335px;
                 height: 255px;

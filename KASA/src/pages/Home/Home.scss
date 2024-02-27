@@ -1,33 +1,29 @@
-$main-color :  #FF6060;
-$text-color : white;
-$background-color : #F6F6F6;
+$main-color: #ff6060;
+$text-color: white;
+$background-color: #f6f6f6;
 
 .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: $background-color;
+  border-radius: 25px;
+  margin-top: 30px;
+  gap: 20px;
+  padding: 30px;
+
+  &__link {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: $background-color;
-    border-radius: 25px;
-    margin-top: 30px;
-    gap: 20px;
-    padding: 30px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
 
-    &__link {
-        display: flex;
-        width: 340px;
-        height: 340px;
-        cursor: pointer;     
-        transition: transform 0.4s ease;
-        
-        &:hover {
-            transform: scale(1.06);
-        }  
+    &:hover {
+      transform: scale(1.06);
     }
+  }
 
-    @media (max-width : 1240px) {
-        background-color: white;
-    }
+  @media (max-width: 1240px) {
+    background-color: white;
+  }
 }
-
-
