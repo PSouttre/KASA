@@ -13,6 +13,11 @@ $main-color :  #FF6060;
         margin: 15px;
     }
 
+    @media (max-width : 380px) {
+        padding: 0;
+    }
+
+
     a {
         color: $main-color;
         padding: 10px;

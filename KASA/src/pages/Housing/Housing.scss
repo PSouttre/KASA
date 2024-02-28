@@ -186,13 +186,12 @@ $background-star : #E3E3E3;
             gap: 0;
         }
             .each__collapse {
-                @media (max-width : 380px) {
-                    height: 30px;
-                }
 
                 &__header{
                     @media (max-width : 380px) {
                         padding: 15px;
+                        height: 30px;
+
                     }
 
                     &__title {
@@ -205,11 +204,12 @@ $background-star : #E3E3E3;
 
         .each__collapse__content {
             @media (max-width : 380px) {
-                font-size: 0.7em;
+                font-size: 0.75em;
             }
 
             .content {
                 line-height: 2;
+                padding: 25px;
             }
 
         }
