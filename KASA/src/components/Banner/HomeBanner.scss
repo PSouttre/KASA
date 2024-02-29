@@ -21,10 +21,12 @@ $text-color : white;
 
         @media (max-width : 870px) {
             height: 165px;
+            border-radius: 18px;
             }
         
         @media (max-width : 380px) {
-            height: 110px;;
+            height: 110px;
+            border-radius: 10px;
             }
     
     }

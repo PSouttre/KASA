@@ -30,6 +30,11 @@ $text-color : white;
         left: 50%;
         bottom: 10px;
         color: $text-color;
+
+        @media (max-width : 380px) {
+            display: none;
+        }
+    
     }
 }
 
@@ -41,11 +46,28 @@ $text-color : white;
     top: 35%;
     color: $text-color;
 
+    @media (max-width : 870px) {
+        height: 50px;
+    }
+
+    @media (max-width : 380px) {
+        height: 20px;
+    }
+
+
 }
 
 .fa-chevron-left{
     left: 10px;
+
+    @media (max-width : 380px) {
+        left: 5px;;
+    }
 }
 .fa-chevron-right {
     right: 10px;
+
+    @media (max-width : 380px) {
+        right: 5px;;
+    }
 }
