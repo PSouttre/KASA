@@ -1,15 +1,19 @@
 import Footer from "../components/Footer/Footer"
 import Header from "../components/Header/Header"
 
+import "./MainLayout.scss"
+
 const MainLayout = ({children}) => {
     return (
-        <>
-            <Header />
-            <main>
+        <div className="mainLayout">
+            <div>
+                <Header />
+                <main>
                     {children}
-            </main>
+                </main>
+            </div>
             <Footer/>
-        </>
+        </div>
     )
 }
 

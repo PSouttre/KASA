@@ -43,8 +43,20 @@ $background-color : #F6F6F6;
         display: flex;
         justify-content: center;
         width: 100%;
+        // animation
+        transform: scaleY(1); // hauteur normale
+        transform-origin: top; // en partant du haut
+        transition: 0.5s; // temps
+        max-height: 100vh; // magie :D
+
+        // animation
+        &.hidden {
+            transform: scaleY(0);
+            max-height: 0px;
+        }
 
         .content {
+            display: block;
             background-color: $background-color;
             color: $main-color;
             margin: 0;
@@ -56,9 +68,6 @@ $background-color : #F6F6F6;
     }
 }
 
-.hidden {
-    display: none;
-}
 
 
 

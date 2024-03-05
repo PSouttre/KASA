@@ -16,9 +16,11 @@ $text-color : white;
     margin: 10px;
         
     &__slide {
+        width: 100%;
         img{
+            border-radius: 25px;
+            height: 255px;
             width: 100%;
-            height: 100%;
             object-fit: cover;
         }
     }
@@ -43,7 +45,8 @@ $text-color : white;
     height: 80px;
     cursor: pointer;
     position: absolute;
-    top: 35%;
+    top: 50%;
+    transform: translateY(-50%);
     color: $text-color;
 
     @media (max-width : 870px) {
@@ -53,8 +56,6 @@ $text-color : white;
     @media (max-width : 380px) {
         height: 20px;
     }
-
-
 }
 
 .fa-chevron-left{
