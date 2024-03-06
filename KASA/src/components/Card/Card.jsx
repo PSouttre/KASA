@@ -4,12 +4,10 @@ import './Card.scss'
 const Card = ({logement}) => {
 
 const handleClickLocation = () => {
-    // aller sur l'url de la page housing
 }
 
     // On projette le state sur l'affichage (render)
     return (
-        
             <div className='location__card'onClick={handleClickLocation}>
                 <div className='location__card__image__cover'>
                     <img src={logement.cover} />
@@ -18,7 +16,6 @@ const handleClickLocation = () => {
                     {logement.title}
                 </div>
             </div>
-        
     )
 }
 

@@ -11,11 +11,12 @@ const Slideshow = ({pictures}) => {
     // Longueur du tableau de photos
     const lengthArray = pictures.length; 
 
-    //Image précédente
+    //Image suivante
     const nextSlide = () => {
         setSlide(slide === lengthArray-1 ? 0 : slide + 1)
     };
 
+    //Image précédente
     const prevSlide = () => {
         setSlide(slide === 0 ? lengthArray -1 : slide -1)
     }
@@ -47,7 +48,6 @@ const Slideshow = ({pictures}) => {
                 
             </div>
         </div>
-
     )
 }
 

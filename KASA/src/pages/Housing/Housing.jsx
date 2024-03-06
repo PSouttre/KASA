@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './Housing.scss'
 
 import { useEffect } from 'react'

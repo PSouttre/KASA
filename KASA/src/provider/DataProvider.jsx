@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { useState, useEffect, createContext, useContext } from "react"
 
@@ -9,17 +10,8 @@ export const DataContext = createContext({
 })
 
 // ETAPE 2
-// le provider qui fourni le context a tous ses enfants
-// pour ça il faut mettre un objet dans la props value
-// qui est strictement pareil que notre context
-// ex: context = {
-//     toto: '',
-//     tata: () => {}
-//   }
-// value = {
-//      toto: 'John',
-//      tata: () => {console.log('coucou')}
-//    }
+// le provider fournit le context à tous ses enfants
+
 export const DataProvider = ({children}) => {
     const [data, setData] = useState([])
 
@@ -42,7 +34,7 @@ export const DataProvider = ({children}) => {
 }
 
 // ETAPE 3 (optionel mais pratique)
-// garde fou 🤪 
+
 export const useData = () => {
     const context = useContext(DataContext)
 

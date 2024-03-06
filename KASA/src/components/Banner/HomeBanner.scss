@@ -1,6 +1,4 @@
-$main-color :  #FF6060;
 $text-color : white;
-
 
 .img__banner {
     display: flex;
@@ -27,8 +25,7 @@ $text-color : white;
         @media (max-width : 380px) {
             height: 110px;
             border-radius: 10px;
-            }
-    
+            } 
     }
     
     h1 {
@@ -46,7 +43,6 @@ $text-color : white;
         @media (max-width : 380px) {
             font-size: 24px;
             font-weight: 300;
-            }
-    
+            }    
     }
 }
