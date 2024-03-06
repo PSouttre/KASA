@@ -1,6 +1,4 @@
-$main-color :  #FF6060;
-$text-color : white;
-$background-color : #F6F6F6;
+@import "../../style/variables";
 
 .each__collapse {
     display: flex;
@@ -47,7 +45,7 @@ $background-color : #F6F6F6;
         transform: scaleY(1); // hauteur normale
         transform-origin: top; // en partant du haut
         transition: 0.5s; // temps
-        max-height: 100vh; // magie :D
+        max-height: 100vh; 
 
         // animation
         &.hidden {
@@ -57,7 +55,7 @@ $background-color : #F6F6F6;
 
         .content {
             display: block;
-            background-color: $background-color;
+            background-color: $collapse-background-color;
             color: $main-color;
             margin: 0;
             padding: 25px 35px;

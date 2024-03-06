@@ -1,11 +1,12 @@
-$background-color: #f6f6f6;
+
+@import "../../style/variables";
 
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: $background-color;
+  background-color: $collapse-background-color;
   border-radius: 25px;
   margin-top: 30px;
   gap: 20px;
